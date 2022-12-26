@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css" integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
+    <title>Add  Employee</title>
+</head>
+<body  style="background-color:aqua">
+    <div class="container">
+        <marquee><h1 align="left">Add An Employee System!</h1></marquee>
+        <hr>
+        <form action="/add_emp" method="post">
+            {% csrf_token %}
+            
+              <label for="first_name">First Name</label><br>
+              <input type="text"  id="first_name" name="first_name" value="{{first_name}}"><br>
+              <label for="Last_name">Last Name</label><br>
+              <input type="text"  id="Last_name" name="Last_name" value="{{last_name}}"><br>
+              <label for="salary">Salary</label><br>
+              <input type="text"  id="salary" name="salary" value="{{salary}}"><br>
+              <label for="dept">Department</label><br>
+              <input type="number"  id="dept" name="dept" value="{{dept}}"><br>
+              <label for="role">Role</label><br>
+              <input type="number"  id="role" name="role" value="{{role}}"><br>
+              <label for="bonus">Bonus</label><br>
+              <input type="number"  id="bonus" name="bonus" value="{{bonus}}"><br>
+              <label for="phone">phone</label><br>
+              <input type="number"  id="phone" name="phone" value="{{phone}}"><br>
+              <hr>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+  
+        
+      </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>
