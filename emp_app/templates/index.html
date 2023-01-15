@@ -1,5 +1,5 @@
 <!doctype html>
-
+{% load static %}
 <html lang="ar" dir="rtl">
   <head>
     <!-- Required meta tags -->
@@ -8,26 +8,37 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-+4j30LffJ4tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="logo_default.png">
     <title>Office Employee Management System</title>
     <style>
       a{color: rgb(18, 4, 31); font-size: 30px;}
+      .container{
+        background-color: black;
+      }
+
     </style>
   </head>
   <body style="background-color:aqua">
-    
-    <div class="container" align="left">
-        <marquee><h1 align="center">Office Employee Management System</h1></marquee>
-        <hr >
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">
+          <img src="static/images/logo_default.png" alt="">
+        </a>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link" class="btn btn-primary">Logout</a></li>
+        </ul> 
         
-
-        <a class="btn btn-primary" href="{% url 'index' %}" role="button">Filter Employee</a><br><br>
-        <a class="btn btn-primary" href="{% url 'remove_emp' %}" role="button" >Remove An Employee</a><br><br>
-        <a class="btn btn-primary" href="{% url 'add_emp' %}" role="button" >Add An Employee</a><br><br>
-        <a class="btn btn-primary" href="{% url 'all_emp' %}" role="button" >View All Employee</a><br><br>
-        <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a><br><br>
+      </nav>
+        <h1 align="center">Office Employee Management System</h1>
+        
+        
+    <div align="left">
+      <a class="btn btn-primary" href="{% url 'filter_emp' %}" role="button">Filter Employee</a><br><br>
+      <a class="btn btn-primary" href="{% url 'remove_emp' %}" role="button" >Remove An Employee</a><br><br>
+      <a class="btn btn-primary" href="{% url 'add_emp' %}" role="button" >Add An Employee</a><br><br>
+      <a class="btn btn-primary" href="{% url 'all_emp' %}" role="button" >View All Employee</a><br><br>
+      <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a><br><br>
        
-      </div>
+    </div>
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
